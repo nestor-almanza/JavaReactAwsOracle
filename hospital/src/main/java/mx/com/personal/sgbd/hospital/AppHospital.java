@@ -14,12 +14,16 @@ public class AppHospital {
 
 	public static void main(String[] args) {
 
-		AbstractApplicationContext context = new AnnotationConfigApplicationContext(AppConfigOracle.class);
-		
-		IEspecialidadService service = (IEspecialidadService) context.getBean(EspecialidadServiceImpl.class);
-
-		 service.listaAll().forEach(x->
-		System.out.println( x.getIdEspecialidad() + " , " + x.getNombre()));
+		/*
+		 * AbstractApplicationContext context = new
+		 * AnnotationConfigApplicationContext(AppConfigOracle.class);
+		 * 
+		 * IEspecialidadService service = (IEspecialidadService)
+		 * context.getBean(EspecialidadServiceImpl.class);
+		 * 
+		 * service.listaAll().forEach(x-> System.out.println( x.getIdEspecialidad() +
+		 * " , " + x.getNombre()));
+		 */
 		
 		
 	}
