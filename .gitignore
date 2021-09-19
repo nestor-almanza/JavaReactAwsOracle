@@ -10,6 +10,13 @@
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
 
+hospital/.mvn/wrapper/MavenWrapperDownloader.java
+hospital/.mvn/wrapper/maven-wrapper.jar
+hospital/.mvn/wrapper/maven-wrapper.properties
+hospital/mvnw
+hospital/mvnw.cmd
+hospital/.mvn/wrapper/maven-wrapper.jar
+
 # Package Files #
 *.jar
 *.war
