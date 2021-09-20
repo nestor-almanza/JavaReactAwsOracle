@@ -30,15 +30,22 @@ export const Especialidad = () => {
             <tbody>
                 {
                     especialidades.map( especialidad => (
+
                         <tr key={ especialidad.idEspecialidad }>
                             <td> { especialidad.idEspecialidad} </td>
                             <td> { especialidad.nombre } </td>
+                            
+                            <button>eliminar</button>
+                            <button>actualizar</button>
                         </tr>
                     ))
                 }         
             </tbody>
-
+            <button>agregar</button>
             </table>
         </div>
     )
+
+    
+    
 }
