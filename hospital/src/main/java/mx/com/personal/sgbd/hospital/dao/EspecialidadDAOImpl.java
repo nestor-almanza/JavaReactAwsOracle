@@ -29,8 +29,9 @@ public class EspecialidadDAOImpl extends JdbcDaoSupport implements IEspecialidad
 		
 	}
 
-	public void update(Especialidad product) {
-		// TODO Auto-generated method stub
+	public void update(Especialidad especialidad) {
+		String sql = "UPDATE tc_especialidad SET nombre = ? WHERE id_especialidad = ?";
+		getJdbcTemplate().update(sql, new Object[] {especialidad.getNombre(), especialidad.getIdEspecialidad()});
 		
 	}
 

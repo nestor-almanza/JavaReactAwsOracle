@@ -22,15 +22,7 @@ public class EspecialidadServiceImpl implements IEspecialidadService {
 	}
 
 	public void update(Especialidad especialidad) {
-		/*
-		 * Optional<Especialidad> especialidadEncontrada =
-		 * daoEspecialidad.findById(especialidad.getIdEspecialidad());
-		 * 
-		 * if (especialidadEncontrada.isPresent()) { return
-		 * daoEspecialidad.create(especialidadEncontrada); } //si no lo encuentra,
-		 * devuelve instancia vacia, no hacemos nada return new Especialidad();
-		 */
-		
+		daoEspecialidad.update(especialidad);
 	}
 
 	public List<Especialidad> listaAll() {

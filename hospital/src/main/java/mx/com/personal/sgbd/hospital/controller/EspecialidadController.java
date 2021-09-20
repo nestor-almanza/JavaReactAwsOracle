@@ -40,11 +40,13 @@ public class EspecialidadController {
 	 * @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE) public Especialidad
 	 * registrar(@RequestBody Especialidad especialidad) { //return
 	 * service.registrar(especialidad); }
-	 * 
-	 * @PutMapping(consumes = MediaType.APPLICATION_JSON_VALUE) public Especialidad
-	 * modificar(@RequestBody Especialidad especialidad) { //return
-	 * service.modificar(especialidad); }
 	 */
+	
+	 @PutMapping(value = "v1/actualizar/especialidad" ,consumes = MediaType.APPLICATION_JSON_VALUE) 
+	 public void modificar(@RequestBody Especialidad especialidad) {   
+		 service.update(especialidad); 
+	 }
+	 
 
 	@DeleteMapping(value = "v1/eliminar/especialidad/{id}")
 	public Integer eliminar(@PathVariable("id") Integer id) {
