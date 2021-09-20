@@ -42,10 +42,6 @@ public class EspecialidadDAOImpl extends JdbcDaoSupport implements IEspecialidad
 		return lista;
 	}
 
-	public Especialidad find(Integer id) {
-		// TODO Auto-generated method stub
-		return null;
-	}
 
 	public void delete(Especialidad especialidad) {
 		String sql = "delete from tc_especialidad where id_especialidad = ? ";
@@ -57,21 +53,6 @@ public class EspecialidadDAOImpl extends JdbcDaoSupport implements IEspecialidad
 		Especialidad  objeto = 
 				getJdbcTemplate().queryForObject(sql, new Object[]{id}, new BeanPropertyRowMapper<Especialidad>(Especialidad.class));
 		return objeto;
-	}
-
-	public List<Especialidad> findProducts() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	public List<Especialidad> findProductsByAvailable(int id) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	public List<Especialidad> findProductsByAvailableTest() {
-		// TODO Auto-generated method stub
-		return null;
 	}
 
 }

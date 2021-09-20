@@ -14,11 +14,7 @@ public interface IEspecialidadService {
 	void create(Especialidad product);
 	void update(Especialidad product);
 	List<Especialidad> listaAll();
-	Especialidad find(Integer id);
 	void delete(Especialidad especialidad);
 	Especialidad findById(Integer id);
-	List<Especialidad> listaAllProducts();
-	List<Especialidad> listaAllProductsById(int id);
-	List<Especialidad> listaAllProductsByIdTest();
 
 }

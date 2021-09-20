@@ -29,11 +29,6 @@ public class EspecialidadServiceImpl implements IEspecialidadService {
 		return daoEspecialidad.listaAll();
 	}
 
-	public Especialidad find(Integer id) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
 	public void delete(Especialidad especialidad) {
 		daoEspecialidad.delete(especialidad);
 		
@@ -41,21 +36,6 @@ public class EspecialidadServiceImpl implements IEspecialidadService {
 
 	public Especialidad findById(Integer id) {
 		return daoEspecialidad.findById(id);
-	}
-
-	public List<Especialidad> listaAllProducts() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	public List<Especialidad> listaAllProductsById(int id) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	public List<Especialidad> listaAllProductsByIdTest() {
-		// TODO Auto-generated method stub
-		return null;
 	}
 
 }

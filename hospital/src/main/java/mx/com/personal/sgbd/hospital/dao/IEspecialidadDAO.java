@@ -12,10 +12,7 @@ public interface IEspecialidadDAO {
 	void create(Especialidad especialidad);
 	void update(Especialidad especialidad);
 	List<Especialidad> listaAll();
-	Especialidad find(Integer id);
 	void delete(Especialidad especialidad);
 	Especialidad findById(Integer id);
-	List<Especialidad> findProducts();
-	List<Especialidad> findProductsByAvailable(int id);
-	List<Especialidad> findProductsByAvailableTest();
+
 }
