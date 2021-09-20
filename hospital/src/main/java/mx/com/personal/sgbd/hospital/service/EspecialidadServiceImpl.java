@@ -17,7 +17,7 @@ public class EspecialidadServiceImpl implements IEspecialidadService {
 	private IEspecialidadDAO  daoEspecialidad;
 
 	public void create(Especialidad especialidad) {
-		// TODO Auto-generated method stub
+		daoEspecialidad.create(especialidad);
 		
 	}
 

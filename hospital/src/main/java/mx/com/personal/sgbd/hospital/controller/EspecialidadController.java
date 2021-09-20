@@ -36,11 +36,12 @@ public class EspecialidadController {
 		return especialidades;
 	}
 	
-	/*
-	 * @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE) public Especialidad
-	 * registrar(@RequestBody Especialidad especialidad) { //return
-	 * service.registrar(especialidad); }
-	 */
+	
+	  @PostMapping(value = "v1/insertar/especialidad" ,consumes = MediaType.APPLICATION_JSON_VALUE) 
+	  public void registrar(@RequestBody Especialidad especialidad) { 
+		  service.create(especialidad); 
+	  }
+	 
 	
 	 @PutMapping(value = "v1/actualizar/especialidad" ,consumes = MediaType.APPLICATION_JSON_VALUE) 
 	 public void modificar(@RequestBody Especialidad especialidad) {   

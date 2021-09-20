@@ -24,8 +24,9 @@ public class EspecialidadDAOImpl extends JdbcDaoSupport implements IEspecialidad
 		setDataSource(dataSource);
 	}
 	
-	public void create(Especialidad product) {
-		// TODO Auto-generated method stub
+	public void create(Especialidad especialidad) {
+		String sql = "INSERT into tc_especialidad (id_especialidad, nombre) values(?,?)";
+		getJdbcTemplate().update(sql, new Object[] {especialidad.getIdEspecialidad() , especialidad.getNombre()});
 		
 	}
 
