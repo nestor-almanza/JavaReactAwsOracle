@@ -1,11 +1,15 @@
 package mx.com.personal.sgbd.hospital.dao;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.List;
+import java.util.Optional;
 
 import javax.sql.DataSource;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
+import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.core.support.JdbcDaoSupport;
 import org.springframework.stereotype.Component;
 
@@ -41,14 +45,16 @@ public class EspecialidadDAOImpl extends JdbcDaoSupport implements IEspecialidad
 		return null;
 	}
 
-	public void delete(Integer id) {
-		// TODO Auto-generated method stub
-		
+	public void delete(Especialidad especialidad) {
+		String sql = "delete from tc_especialidad where id_especialidad = ? ";
+		getJdbcTemplate().update(sql, especialidad.getIdEspecialidad());
 	}
 
-	public Especialidad findProductById(int id) {
-		// TODO Auto-generated method stub
-		return null;
+	public Especialidad findById(Integer id) {
+		String sql = "select  id_especialidad, nombre FROM tc_especialidad where id_especialidad = ?";
+		Especialidad  objeto = 
+				getJdbcTemplate().queryForObject(sql, new Object[]{id}, new BeanPropertyRowMapper<Especialidad>(Especialidad.class));
+		return objeto;
 	}
 
 	public List<Especialidad> findProducts() {
